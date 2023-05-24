@@ -1,0 +1,314 @@
+body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+/* Header styles */
+.nav-bar {
+    background-color: #0000CD;
+    height: 80px;
+    margin-top: -16px;
+}
+.nav-bar > .name h1 {
+    float: right;
+    padding: 0px 40px;
+}
+.nav-bar > .name h1 a {
+    color: white;
+    text-decoration: none;
+}
+.nav-bar > .details li {
+    list-style-type: none;
+    float: left;
+}
+.nav-bar > .details li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 3px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-right: 15px;
+}
+.nav-bar > .details li a:hover {
+    background-color: #1F45FC;
+}
+
+/* Info styles below */
+.nav-bar > .details li h2 {
+    color: white;
+}
+.links-bar > .logout li {
+    list-style-type: none;
+    float: right;
+}
+.links-bar > .logout li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 3px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-right: -98px;
+}
+.links-bar > .logout li a:hover {
+    background-color: #0000CD;
+}
+/* Info styles above */
+.links-bar {
+    background-color: #1F45FC;
+    height: 80px;
+    margin-top: -16px;
+}
+.links-bar > .hlinks li {
+    list-style-type: none;
+    float: left;
+}
+.links-bar > .hlinks li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 30px 20px;
+}
+.links-bar > .hlinks li a:hover, .links-bar > .hlinks li a:focus {
+    background-color: #0000CD;
+}
+
+
+/* Body styles */
+.content {
+    background-image: url(homepics/everton-vila-AsahNlC0VhQ-unsplash1.jpg);
+    min-height: 750px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: brightness(50%); */
+    margin-top: -2px;
+}
+.content > .container {
+    text-align: center;
+    padding-top: 20px;
+}
+.content > .container a {
+    border: 1px solid #0000CD;
+    border-radius: 10px;
+    background-color: #0000CD;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+}
+.content >.container a:hover {
+    background-color: #1F45FC;
+}
+.content > .content-image {
+    text-align: center;
+    background-color: #1F45FC;
+    margin-top: 50px;
+    height: 290px;
+}
+
+/* About styles below */
+.content > .content-img {
+    text-align: center;
+    background-color: #1F45FC;
+    margin-top: 50px;
+    height: 200px;
+}
+.content > .content-img > .explanation {
+    display: flex;
+    padding: 0px 350px 50px;
+}
+.footer > .download {
+    margin-left: 700px;
+    margin-top: -150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer > .copyright {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+}
+/* About styles above */
+
+.content > .content-image > .heading {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.content > .content-image > .explanation {
+    display: flex;
+    padding: 0px 350px 50px;
+}
+.content > .content-image > .clink a {
+    border: 1px solid #0000CD;
+    border-radius: 10px;
+    background-color: #0000CD;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+}
+.content > .content-image > .clink a:hover {
+    background-color: #1F45FC;
+}
+.content > .features {
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 0px 0px 150px;
+}
+.content > .features > .column {
+    padding: 20px;
+    margin: 42px;
+    text-align: center;
+    color: white;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #0000CD;
+    height: 290px;
+}
+.footer > .name {
+    padding-top: 20px;
+}
+.footer > .name h1 {
+    padding: 0px 40px;
+}
+.footer > .name h1 a {
+    text-decoration: none;
+    color: white;
+}
+.footer > .fcontent {
+    padding: 0px 40px;
+    color: white;
+}
+.footer > .fbar {
+    width: 1000px;
+    display: flex;
+    margin: -185px 0px 0px 570px
+}
+.footer > .fbar > .column {
+    padding: 20px;
+    margin: 42px;
+    text-align: center;
+    color: white;
+}
+.footer > .fbar > .column a {
+    text-decoration: none;
+    color: white;
+}
+.footer > .copywright {
+    text-align: center;
+    color: black;
+    margin-top: -40px;
+}
+
+/* Form styles */
+.form {
+    background-color: white;
+    box-sizing: border-box;
+    margin-left: 520px;
+    max-width: 300px;
+    padding: 30px;
+    opacity: 0.9;
+}
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px 0px;
+    border: none;
+    border-bottom: 1px solid #0000CD;
+    display: block;
+    width: 100%;
+}
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #0000CD;
+}
+label {
+    color: black;
+    margin-left: 5px;
+}
+.form a {
+    text-decoration: none;
+    color: #1F45FC;
+}
+.form a:hover {
+    text-decoration: underline;
+}
+.form p {
+    color: black;
+    text-align: center;
+}
+.btn {
+    background-color: white;
+    color: #1F45FC;
+    padding: 10px 20px;
+    border: 1px solid #0000CD;
+    outline: none;
+    margin-top: 10px;
+    width: 100%;
+}
+.btn:hover {
+    background-color: #1F45FC;
+    color: white;
+}
+.btn:active {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Info php styles */
+.user-info {
+    text-align: center;
+}
+.user-info > .icon {
+    font-size: 100px;
+    margin-top: 20px;
+}
+.user-info > .name {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.user-finance-details {
+    text-align: center;
+}
+.user-finance-details a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* wallet php styles */
+.user-info > .icon i {
+    font-size: 100px;
+}
+.user-info > .plus {
+    border: none;
+    background-color: white;
+}
+.user-info > .plus:hover {
+    background-color: white;
+    border: #0000CD;
+}
+#wallets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#wallets-container > .wallet {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+#wallets-container > .wallet:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#wallets-container > .wallet i {
+    font-size: 50px;
+    margin-right: 10px;
+}
+/* terms and conditions styles */
