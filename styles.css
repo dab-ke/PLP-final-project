@@ -6,7 +6,7 @@ body {
 }
 /* Header styles */
 .nav-bar {
-    background-color: #0000CD;
+    background-color: #3baf6b;
     height: 80px;
     margin-top: -16px;
 }
@@ -55,7 +55,7 @@ body {
     margin-right: -98px;
 }
 .links-bar > .logout li a:hover {
-    background-color: #0000CD;
+    background-color: #3baf6b;
 }
 /* Info styles above */
 .links-bar {
@@ -74,7 +74,7 @@ body {
     padding: 30px 20px;
 }
 .links-bar > .hlinks li a:hover, .links-bar > .hlinks li a:focus {
-    background-color: #0000CD;
+    background-color: #3baf6b;
 }
 
 
@@ -93,9 +93,9 @@ body {
     padding-top: 20px;
 }
 .content > .container a {
-    border: 1px solid #0000CD;
+    border: 1px solid #3baf6b;
     border-radius: 10px;
-    background-color: #0000CD;
+    background-color: #3baf6b;
     text-decoration: none;
     color: white;
     padding: 5px 20px;
@@ -143,9 +143,9 @@ body {
     padding: 0px 350px 50px;
 }
 .content > .content-image > .clink a {
-    border: 1px solid #0000CD;
+    border: 1px solid #3baf6b;
     border-radius: 10px;
-    background-color: #0000CD;
+    background-color: #3baf6b;
     text-decoration: none;
     color: white;
     padding: 5px 20px;
@@ -168,7 +168,7 @@ body {
 
 /* Footer styles */
 .footer {
-    background-color: #0000CD;
+    background-color: #3baf6b;
     height: 290px;
 }
 .footer > .name {
@@ -220,13 +220,13 @@ input {
     margin-bottom: 10px;
     padding: 8px 0px;
     border: none;
-    border-bottom: 1px solid #0000CD;
+    border-bottom: 1px solid #3baf6b;
     display: block;
     width: 100%;
 }
 input:focus {
     outline: none;
-    border-bottom: 2px solid #0000CD;
+    border-bottom: 2px solid #3baf6b;
 }
 label {
     color: black;
@@ -247,7 +247,7 @@ label {
     background-color: white;
     color: #1F45FC;
     padding: 10px 20px;
-    border: 1px solid #0000CD;
+    border: 1px solid #3baf6b;
     outline: none;
     margin-top: 10px;
     width: 100%;
@@ -292,7 +292,7 @@ label {
 }
 .user-info > .plus:hover {
     background-color: white;
-    border: #0000CD;
+    border: #3baf6b;
 }
 #wallets-container {
     display: flex;
