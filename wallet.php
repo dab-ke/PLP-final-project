@@ -56,6 +56,7 @@
     
 </body>
 
+
 <script>
   var walletsContainer = document.getElementById("wallets-container");
   var addWalletButton = document.getElementById("add-wallet-button");
@@ -92,6 +93,7 @@
     location.reload();
   }
 </script>
+
 
 
 <?php 
