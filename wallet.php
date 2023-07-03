@@ -43,7 +43,7 @@
     </div>
     <div class="user-info">
         <div class="icon"><i class="fas fa-wallet"></i></div>
-        <p>Create a new wallet...</p>
+        <p>Add a new wallet...</p>
         <button id="add-wallet-button" class="plus"><i class="fas fa-plus"></i></button>
     </div>
     <div id="wallets-container">

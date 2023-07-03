@@ -41,8 +41,12 @@
             </ul>
         </div>
     </div>
+    <div class="user-info">
+        <div class="icon"><i class="fas fa-money-bill-transfer"></i></div>
+    </div>
     <div class="user-finance-details">
         <p><a href="#">Recent Transactions</a></p>
+        <P><a href="#">Recently deleted: 0</a></P>
         <p><a href="#">Pay</a></p>
         <p><a href="#">Send</a></p>
     </div>

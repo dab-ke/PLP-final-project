@@ -47,12 +47,11 @@
         <div class="name"><?php echo $_SESSION['username']; ?></div>
     </div>
     <div class="user-finance-details">
-        <p><a href="#">Favorites: 0</a></p>
-        <P><a href="#">Recently deleted: 0</a></P>
+        <p><a href="#">Recent Transactions</a></p>
         <p><a href="#">Change password</a></p>
         <p><a href="#">Call support</a></p>
         <p><a href="#">FAQs</a></p>
-        <p><a href="t&c.html">Terms and Conditions</a></p>
+        <p><a href="t&c.php">Terms and Conditions</a></p>
     </div>
     
 </body>

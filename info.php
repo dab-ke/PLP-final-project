@@ -47,7 +47,7 @@
     </div>
     <div class="user-finance-details">
         <p><a href="wallet.php">Wallets created: 0</a></p>
-        <p>Total balance: $0.00</p>
+        <p>Total balance: ksh 0.00</p>
         <p><a href="#">Notifications: 0</a></p>
     </div>
     
