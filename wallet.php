@@ -57,64 +57,42 @@
 </body>
 
 <script>
-    var walletsContainer = document.getElementById("wallets-container");
-    var addWalletButton = document.getElementById("add-wallet-button");
-    // var currentUserId = getUserId();
+  var walletsContainer = document.getElementById("wallets-container");
+  var addWalletButton = document.getElementById("add-wallet-button");
 
-    for(var i=0; i <localStorage.length; i++){
-        var walletName = localStorage.key(i);
-        if(walletName.startsWith("wallet-")){
-            var walletData =JSON.parse(localStorage.getItem(walletName));
-            // if(walletData && walletData.userId ===currentUserId){
-            //     var newWallet = document.createElement("div");
-            //     newWallet.className = "wallet";
-            //     newWallet.innerHTML = '<i class="fas fa-wallet"></i><span>' + walletName.slice(7) + '</span>';
-            //     walletsContainer.appendChild(newWallet);
-            // }
-            var newWallet = document.createElement("div");
-            newWallet.className = "wallet";
-            newWallet.innerHTML = '<i class="fas fa-wallet"></i><span>' + walletName.slice(7) + '</span>';
-            walletsContainer.appendChild(newWallet);
-        }
+  for (var i = 0; i < localStorage.length; i++) {
+    var walletName = localStorage.key(i);
+    if (walletName.startsWith("wallet-")) {
+      var walletData = JSON.parse(localStorage.getItem(walletName));
+      var newWallet = document.createElement("div");
+      newWallet.className = "wallet";
+      newWallet.innerHTML =
+        '<i class="fas fa-wallet"></i><span>' + walletName.slice(7) + "</span>";
+      walletsContainer.appendChild(newWallet);
     }
+  }
 
-    addWalletButton.onclick = function(){
-        var walletName = window.prompt("Enter the name of the new wallet:");
-        if(walletName != null && walletName !=""){
-            var newWallet = document.createElement("div");
-            newWallet.className = "wallet";
-            newWallet.innerHTML = '<i class="fas fa-wallet"></i><span>' + walletName + '</span>';
+  addWalletButton.onclick = function () {
+    var walletName = window.prompt("Enter the name of the new wallet:");
+    if (walletName !== null && walletName !== "") {
+      var newWallet = document.createElement("div");
+      newWallet.className = "wallet";
+      newWallet.innerHTML =
+        '<i class="fas fa-wallet"></i><span>' + walletName + "</span>";
 
-            // var walletData = {name:walletName, balance:0,userId:currentUserId};
-            localStorage.setItem("wallet-" + walletName, JSON.stringify(walletData));
+      var walletData = { name: walletName, balance: 0 };
+      localStorage.setItem("wallet-" + walletName, JSON.stringify(walletData));
 
-            var walletsCreatedCount =parseInt(localStorage.getItem("walletsCreatedCount")) ||0;
-            walletsCreatedCount++;
-
-            localStorage.setItem("walletsCreatedCount",walletsCreatedCount.toString());
-            walletsContainer.appendChild(newWallet);
-
-            var walletData = {
-                name:walletName,
-                balance:0
-            };
-        }
-    };
-
-    function deleteWallet(walletId){
-        var walletData =JSON.parse(localStorage.getItem("wallet-" + walletId));
-
-        localStorage.removeItem("wallet-" + walletId);
-        var walletsCreatedCount = parseInt(localStorage.getItem("walletsCreatedCount")||"0");
-        if(walletsCreatedCount>0){
-            walletsCreatedCount--;
-            
-            localStorage.setItem("walletsCreatedCount",walletsCreatedCount.toString());
-        }
-
-        location.reload();
+      walletsContainer.appendChild(newWallet);
     }
+  };
+
+  function deleteWallet(walletId) {
+    localStorage.removeItem("wallet-" + walletId);
+    location.reload();
+  }
 </script>
+
 
 <?php 
     }else{
