@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up-FlexWay</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/form.css"> 
 </head>
 <body>
     <div class="nav-bar">
@@ -57,7 +60,7 @@ $dbuser = "root";
 $dbpassword = "";
 $dbname = "flexway_db";
 
-$connection = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
+$connection = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname);
 
 if (!$connection){
     echo "<script>alert('Database connection invalid');</script>";
@@ -70,28 +73,26 @@ if (isset($_POST['signup'])){
     $password1 = $_POST['password1'];
     $password2 = $_POST['password2'];
 
+    if ($password1 === $password2) {
+        $hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users(username, email, phone, password1, password2) VALUES ('$username', '$email', '$phone', '$hashedPassword', '$password2')";
+        $query = mysqli_query($connection, $sql);
 
-    $sql = "INSERT INTO users(username, email, phone, password1, password2) VALUES ('$username', '$email', '$phone', '$password1', '$password2')";
-    $query = mysqli_query($connection,$sql);
-
-if ($query){
-    echo "<script>alert('Account successfully created');</script>";
-}
-if ($_POST["password2"] === $_POST["password1"]) {
-    echo "<script> alert('Passwords match') </script>";
- }
- else {
-    echo "<script> alert('Passwords do not match') </script>";
- }
-}
-?>
-
-<?php
-session_start();
-if(isset($_POST['signup'])){
-    $_SESSION['username'] = $username; 
-
-  header('location: info.php');
+        if ($query){
+            echo "<script>alert('Account successfully created');</script>";
+            
+            // Redirect to info.php only if the account creation is successful
+            session_start();
+            $_SESSION['username'] = $username; 
+            header('location: info.php');
+            exit(); // Ensure that no further code is executed after the redirection
+        } else {
+            echo "<script>alert('Error creating account');</script>";
+        }
+    } else {
+        echo "<script>alert('Passwords do not match');</script>";
+    }
 }
 ?>
+
 </html>

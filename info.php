@@ -13,7 +13,11 @@
     <title>Home-FlexWay</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/header-info.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="javascript/home.js"></script>
 </head>
 <body>
     <div class="nav-bar">
@@ -46,18 +50,22 @@
         <div class="name"><?php echo $_SESSION['username']; ?></div>
     </div>
     <div class="user-finance-details">
-        <p><a href="wallet.php">Wallets created: 0</a></p>
+        <p><a href="wallet.php">Wallets created</a></p>
         <p>Total balance: ksh 0.00</p>
-        <p><a href="#">Notifications: 0</a></p>
+        <p><a href="#" onclick="openNotificationModal()">Notifications</a></p>
     </div>
     
-</body>
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNotificationModal()">&times;</span>
+            <h2>Notifications</h2>
+            <ul>
+                <li>Notification content goes here...</li>
+            </ul>
+        </div>
+    </div>
 
-<script>
-    var walletsCreated =document.getElementById("wallets-created");
-    var walletsCreatedCount =parseInt(localStorage.getItem("walletsCreatedCount")) ||0;
-    walletsCreated.innerHTML = "Wallets created: " +walletsCreatedCount;
-</script>
+</body>
 
 <?php 
     }else{

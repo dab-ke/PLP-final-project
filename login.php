@@ -45,6 +45,8 @@ echo "<script type='text/javascript'> document.location ='login.php'; </script>"
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +55,10 @@ echo "<script type='text/javascript'> document.location ='login.php'; </script>"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In-FlexWay</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/header.css"> 
+    <link rel="stylesheet" href="styles/form.css">   
 </head>
 <body>
     <div class="nav-bar">

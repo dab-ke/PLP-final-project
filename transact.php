@@ -13,7 +13,11 @@
     <title>Transact-FlexWay</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/header-info.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="javascript/home.js"></script>
 </head>
 <body>
     <div class="nav-bar">
@@ -45,12 +49,31 @@
         <div class="icon"><i class="fas fa-money-bill-transfer"></i></div>
     </div>
     <div class="user-finance-details">
-        <p><a href="#">Recent Transactions</a></p>
-        <P><a href="#">Recently deleted: 0</a></P>
+        <p><a href="#" onclick="openTransactionModal()">Recent Transactions</a></p>
+        <P><a href="#" onclick="openDeletedModal()">Recently deleted</a></P>
         <p><a href="#">Pay</a></p>
         <p><a href="#">Send</a></p>
     </div>
     
+    <div id="transactionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTransactionModal()">&times;</span>
+            <h2>Recent Transactions</h2>
+            <ul>
+                <li>Recent transactions go here...</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="deletedModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDeletedModal()">&times;</span>
+            <h2>Recently Deleted</h2>
+            <ul>
+                <li>Recently deleted content goes here...</li>
+            </ul>
+        </div>
+    </div>
 </body>
 <?php 
     }else{

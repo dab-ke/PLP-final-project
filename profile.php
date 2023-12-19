@@ -14,7 +14,11 @@
     <title>Profile-FlexWay</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/header-info.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="javascript/home.js"></script>
 </head>
 <body>
     <div class="nav-bar">
@@ -47,11 +51,41 @@
         <div class="name"><?php echo $_SESSION['username']; ?></div>
     </div>
     <div class="user-finance-details">
-        <p><a href="#">Recent Transactions</a></p>
+        <p><a href="#" onclick="openFavoritesModal()">Favorites</a></p>
         <p><a href="#">Change password</a></p>
         <p><a href="#">Call support</a></p>
-        <p><a href="#">FAQs</a></p>
-        <p><a href="t&c.php">Terms and Conditions</a></p>
+        <p><a href="#" onclick="openQuestionsModal()">FAQs</a></p>
+        <p><a href="#" onclick="openTermsandconditionsModal()">Terms and Conditions</a></p>
+    </div>
+
+    <div id="favoritesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFavoritesModal()">&times;</span>
+            <h2>Favorites</h2>
+            <ul>
+                <li>Favorite transactions go here...</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="questionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuestionsModal()">&times;</span>
+            <h2>FAQs</h2>
+            <ul>
+                <li>Frequently asked questions go here...</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="termsandconditionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTermsandconditionsModal()">&times;</span>
+            <h2>Terms and Conditions</h2>
+            <ul>
+                <li>Terms and Conditions go here...</li>
+            </ul>
+        </div>
     </div>
     
 </body>

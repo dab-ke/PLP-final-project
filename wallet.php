@@ -13,7 +13,10 @@
     <title>Wallet-FlexWay</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/header-info.css">
+    <link rel="stylesheet" href="styles/wallet.css">
 </head>
 <body>
     <div class="nav-bar">
