@@ -1,0 +1,99 @@
+.content {
+    background-image: url(../homepics/everton-vila-AsahNlC0VhQ-unsplash1.jpg);
+    min-height: 750px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: brightness(50%); */
+    margin-top: -2px;
+}
+.content > .container {
+    text-align: center;
+    padding-top: 20px;
+}
+.content > .container a {
+    border: 1px solid #3baf6b;
+    border-radius: 10px;
+    background-color: #3baf6b;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+}
+.content >.container a:hover {
+    background-color: #5ac486ea;
+}
+.content > .content-image {
+    text-align: center;
+    background-color: #5ac486ea;
+    margin-top: 50px;
+    height: 290px;
+}
+.content > .content-image > .heading {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.content > .content-image > .explanation {
+    display: flex;
+    padding: 0px 350px 50px;
+}
+.content > .content-image > .clink a {
+    border: 1px solid #3baf6b;
+    border-radius: 10px;
+    background-color: #3baf6b;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+}
+.content > .content-image > .clink a:hover {
+    background-color: #5ac486ea;
+}
+.content > .features {
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.content > .features > .column {
+    padding: 20px;
+    margin: 42px;
+    text-align: center;
+    color: white;
+}
+.footer {
+    background-color: #3baf6b;
+    height: 290px;
+}
+.footer > .name {
+    padding-top: 20px;
+}
+.footer > .name h1 {
+    padding: 0px 40px;
+}
+.footer > .name h1 a {
+    text-decoration: none;
+    color: white;
+}
+.footer > .fcontent {
+    padding: 0px 40px;
+    color: white;
+}
+.footer > .fbar {
+    width: 1000px;
+    display: flex;
+    margin: -185px 0px 0px 570px
+}
+.footer > .fbar > .column {
+    padding: 20px;
+    margin: 42px;
+    text-align: center;
+    color: white;
+}
+.footer > .fbar > .column a {
+    text-decoration: none;
+    color: white;
+}
+.footer > .copywright {
+    text-align: center;
+    color: black;
+    margin-top: -40px;
+}

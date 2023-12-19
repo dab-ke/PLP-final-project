@@ -1,0 +1,53 @@
+.content {
+    background-image: url(../homepics/everton-vila-AsahNlC0VhQ-unsplash1.jpg);
+    min-height: 750px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: brightness(50%); */
+    margin-top: -2px;
+}
+.content > .container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.content > .content-img {
+    text-align: center;
+    background-color: #5ac486ea;
+    margin-top: 50px;
+    height: 200px;
+}
+.content > .content-img > .explanation {
+    display: flex;
+    padding: 0px 350px 50px;
+}
+.footer {
+    background-color: #3baf6b;
+    height: 290px;
+}
+.footer > .name {
+    padding-top: 20px;
+}
+.footer > .name h1 {
+    padding: 0px 40px;
+}
+.footer > .name h1 a {
+    text-decoration: none;
+    color: white;
+}
+.footer > .fcontent {
+    padding: 0px 40px;
+    color: white;
+}
+.footer > .download {
+    margin-left: 700px;
+    margin-top: -150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer > .copyright {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+}

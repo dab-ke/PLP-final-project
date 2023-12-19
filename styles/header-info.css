@@ -1,0 +1,55 @@
+.nav-bar {
+    background-color: #3baf6b;
+    height: 80px;
+    margin-top: -16px;
+}
+.nav-bar > .name h1 {
+    float: right;
+    padding: 0px 40px;
+}
+.nav-bar > .name h1 a {
+    color: white;
+    text-decoration: none;
+}
+.nav-bar > .details li {
+    list-style-type: none;
+    float: left;
+}
+.nav-bar > .details li h2 {
+    color: white;
+}
+.links-bar {
+    background-color: #5ac486ea;
+    height: 80px;
+    margin-top: -16px;
+}
+.links-bar > .hlinks li {
+    list-style-type: none;
+    float: left;
+}
+.links-bar > .hlinks li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 30px 20px;
+}
+.links-bar > .hlinks li a:hover, .links-bar > .hlinks li a:focus {
+    background-color: #3baf6b;
+}
+.links-bar > .logout li {
+    list-style-type: none;
+    float: right;
+}
+.links-bar > .logout li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 3px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-right: -98px;
+}
+.links-bar > .logout li a:hover {
+    background-color: #3baf6b;
+}

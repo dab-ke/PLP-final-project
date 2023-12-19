@@ -1,0 +1,32 @@
+.user-info {
+    text-align: center;
+}
+.user-info > .icon {
+    font-size: 100px;
+    margin-top: 20px;
+}
+.user-info > .plus {
+    border: none;
+    background-color: white;
+}
+.user-info > .plus:hover {
+    background-color: white;
+    border: #3baf6b;
+}
+#wallets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#wallets-container > .wallet {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+#wallets-container > .wallet:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#wallets-container > .wallet i {
+    font-size: 50px;
+    margin-right: 10px;
+}
