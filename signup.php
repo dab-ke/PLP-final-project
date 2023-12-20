@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up-FlexWay</title>
 
-    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/form.css"> 
@@ -74,8 +73,8 @@ if (isset($_POST['signup'])){
     $password2 = $_POST['password2'];
 
     if ($password1 === $password2) {
-        $hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users(username, email, phone, password1, password2) VALUES ('$username', '$email', '$phone', '$hashedPassword', '$password2')";
+        //$hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users(username, email, phone, password1, password2) VALUES ('$username', '$email', '$phone', '$password1', '$password2')";
         $query = mysqli_query($connection, $sql);
 
         if ($query){

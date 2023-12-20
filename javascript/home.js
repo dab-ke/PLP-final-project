@@ -64,6 +64,28 @@ function closeDeletedModal() {
     modal.style.display = "none";
 }
 
+// Pay
+function openPayModal() {
+    var modal = document.getElementById("payModal");
+    modal.style.display = "block";
+}
+
+function closePayModal() {
+    var modal = document.getElementById("payModal");
+    modal.style.display = "none";
+}
+
+// Send
+function openSendModal() {
+    var modal = document.getElementById("sendModal");
+    modal.style.display = "block";
+}
+
+function closeSendModal() {
+    var modal = document.getElementById("sendModal");
+    modal.style.display = "none";
+}
+
 var walletsCreated =document.getElementById("wallets-created");
 var walletsCreatedCount =parseInt(localStorage.getItem("walletsCreatedCount")) ||0;
 walletsCreated.innerHTML = "Wallets created: " +walletsCreatedCount;

@@ -61,3 +61,14 @@ function deleteWallet(walletId) {
 //   }
 // }
 
+
+//Wallet modal
+function openWalletModal() {
+    var modal = document.getElementById("walletModal");
+    modal.style.display = "block";
+}
+
+function closeWalletModal() {
+    var modal = document.getElementById("walletModal");
+    modal.style.display = "none";
+}

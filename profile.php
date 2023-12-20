@@ -61,7 +61,7 @@
     <div id="favoritesModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeFavoritesModal()">&times;</span>
-            <h2>Favorites</h2>
+            <h2 style="text-align:center;">Favorites</h2>
             <ul>
                 <li>Favorite transactions go here...</li>
             </ul>
@@ -71,7 +71,7 @@
     <div id="questionsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeQuestionsModal()">&times;</span>
-            <h2>FAQs</h2>
+            <h2 style="text-align:center;">FAQs</h2>
             <ul>
                 <li>Frequently asked questions go here...</li>
             </ul>
@@ -81,7 +81,7 @@
     <div id="termsandconditionsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeTermsandconditionsModal()">&times;</span>
-            <h2>Terms and Conditions</h2>
+            <h2 style="text-align:center;">Terms and Conditions</h2>
             <ul>
                 <li>Terms and Conditions go here...</li>
             </ul>

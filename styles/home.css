@@ -48,3 +48,15 @@
     text-decoration: none;
     cursor: pointer;
 }
+/* .modal > .modal-content h2 {
+    text-align: center;
+}
+.modal > .modal-content select, input {
+    display: flex;
+    margin: auto;
+    width: 70%;
+}
+.modal > .modal-content > .buttons {
+    display: flex;
+    justify-content: space-around;
+} */

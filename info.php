@@ -58,7 +58,7 @@
     <div id="notificationModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeNotificationModal()">&times;</span>
-            <h2>Notifications</h2>
+            <h2 style="text-align:center;">Notifications</h2>
             <ul>
                 <li>Notification content goes here...</li>
             </ul>
