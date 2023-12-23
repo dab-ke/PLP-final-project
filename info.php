@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/header-info.css">
     <link rel="stylesheet" href="styles/home.css">
     <script src="javascript/home.js"></script>
+    <script src="javascript/wallet.js"></script>
 </head>
 <body>
     <div class="nav-bar">
@@ -49,8 +50,8 @@
         <div class="icon"><i class="fas fa-user"></i></div>
         <div class="name"><?php echo $_SESSION['username']; ?></div>
     </div>
-    <div class="user-finance-details">
-        <p><a href="wallet.php">Wallets created</a></p>
+    <div class="user-finance-details"> 
+        <p><a href="wallet.php">Wallets created: <span id="totalWalletsCount">0</span></a></p>
         <p>Total balance: ksh 0.00</p>
         <p><a href="#" onclick="openNotificationModal()">Notifications</a></p>
     </div>

@@ -51,16 +51,16 @@
         <button id="add-wallet-button" class="plus"><i class="fas fa-plus"></i></button>
     </div>
     <div id="wallets-container">
-        <div class="wallet" onclick="openWalletModal()" oncontextmenu="deleteWallet('123'); return false;">
-            <i class="fas fa-wallet"></i>
-            <div>My Wallet</div>
-        </div>
+    <div class="wallet" onclick="openWalletModal('My Wallet')" oncontextmenu="deleteWallet('123'); return false;">
+        <i class="fas fa-wallet"></i>
+        <div>My Wallet</div>
+    </div>
     </div>
     <div id="walletModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeWalletModal()">&times;</span>
             <i class="fas fa-wallet" style="font-size: 100px; margin-left: 220px;"></i>
-            <h2 style="text-align:center;">My Wallet</h2>
+            <h2 id="modalWalletName" style="text-align:center;">My Wallet</h2>
             <p style="text-align:center;">Wallet balance: 2,000.00</p>
             <div class="buttons" style="display: flex; justify-content: space-around;">
                 <button>Add money</button>
