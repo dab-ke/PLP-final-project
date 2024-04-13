@@ -1,5 +1,5 @@
 <?php
-$db_host = 'localhost';
+$db_host = 'localhost:3307'; // added port parameter "3307" to ensure applications are configured to connect to MySQL using port 3307
 $db_user = 'root';
 $db_pass = '';
 $db_name = 'flexway_db';
