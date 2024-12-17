@@ -34,7 +34,7 @@
     <div class="links-bar">
         <div class="hlinks">
             <ul>
-                <li><a href="info.php">Home</a></li>
+                <li><a href="info.php" class="active">Home</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="wallet.php">Wallets</a></li>
                 <li><a href="transact.php">Transact</a></li>

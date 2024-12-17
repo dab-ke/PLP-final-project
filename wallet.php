@@ -35,7 +35,7 @@
             <ul>
                 <li><a href="info.php">Home</a></li>
                 <li><a href="profile.php">Profile</a></li>
-                <li><a href="wallet.php">Wallets</a></li>
+                <li><a href="wallet.php" class="active">Wallets</a></li>
                 <li><a href="transact.php">Transact</a></li>
             </ul>
         </div>

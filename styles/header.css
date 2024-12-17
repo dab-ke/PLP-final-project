@@ -43,6 +43,6 @@
     text-decoration: none;
     padding: 30px 20px;
 }
-.links-bar > .hlinks li a:hover, .links-bar > .hlinks li a:focus {
+.links-bar > .hlinks li a:hover, .links-bar > .hlinks li a.active {
     background-color: #3baf6b;
 }
