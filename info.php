@@ -6,6 +6,16 @@
 
     if(isset($_SESSION["username"])){
 
+        // Get user_id from the users table
+        $username = $_SESSION['username'];
+        $query = "SELECT id FROM users WHERE username = ?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+        $user_id = $user['id'];
+
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +61,8 @@
         <div class="name"><?php echo $_SESSION['username']; ?></div>
     </div>
     <div class="user-finance-details"> 
-        <p><a href="wallet.php">Wallets created: <span id="totalWalletsCount">0</span></a></p>
-        <p>Total balance: ksh 0.00</p>
+        <p><a href="wallet.php">Wallets created: <?php echo totalWallets($conn, $user_id); ?></a></p>
+        <p>Total balance: KSH <?php echo number_format(totalBalance($conn, $user_id), 2); ?></p>
         <p><a href="#" onclick="openNotificationModal()">Notifications</a></p>
     </div>
     

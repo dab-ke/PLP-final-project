@@ -5,15 +5,15 @@
     font-size: 100px;
     margin-top: 20px;
 }
-.user-info > .plus {
+/* .user-info > .plus {
     border: none;
     background-color: white;
 }
 .user-info > .plus:hover {
     background-color: white;
     border: #3baf6b;
-}
-#wallets-container {
+} */
+/* #wallets-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,4 +29,61 @@
 #wallets-container > .wallet i {
     font-size: 50px;
     margin-right: 10px;
+} */
+
+
+.wallets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.wallets-container > .add-wallet {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #5ac486ea;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+.wallets-container > .add-wallet:hover {
+    background-color: #3baf6b;
+}
+.wallets-container > .wallets-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.wallets-container > .wallets-row > .wallet {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+}
+.wallets-container > .wallets-row > .wallet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.wallets-container > .wallets-row > .wallet i {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.wallets-container > .wallets-row > .wallet h3 {
+    margin: 10px 0;
+    color: #333;
+}
+.wallets-container > .wallets-row > .wallet p {
+    color: #666;
 }

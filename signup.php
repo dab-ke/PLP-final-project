@@ -1,3 +1,70 @@
+<?php 
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $password1 = $_POST['password1'];
+    $password2 = $_POST['password2'];
+
+    if(!empty($username) && !empty($email) && !empty($phone) && !empty($password1) && !empty($password2))
+    {
+        if($password1 === $password2)
+        {
+            // Check if email already exists
+            $check_email = "SELECT * FROM users WHERE email = ?";
+            $stmt = $conn->prepare($check_email);
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if($result->num_rows > 0) {
+                echo "<script>alert('Email already exists!')</script>";
+                echo "<script type='text/javascript'> document.location ='signup.php'; </script>";
+                exit();
+            }
+
+            // Insert new user
+            $query = "INSERT INTO users (username, email, phone, password1) VALUES (?, ?, ?, ?)";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("ssss", $username, $email, $phone, $password1);
+            
+            if($stmt->execute())
+            {
+                // Get the user's ID that was just created
+                $user_id = $conn->insert_id;
+                
+                // Store username in session
+                $_SESSION['username'] = $username;
+                
+                header("Location: info.php");
+                die;
+            }
+            else
+            {
+                echo "<script>alert('Error creating account')</script>";
+                echo "<script type='text/javascript'> document.location ='signup.php'; </script>";
+            }
+        }
+        else
+        {
+            echo "<script>alert('Passwords do not match!')</script>";
+            echo "<script type='text/javascript'> document.location ='signup.php'; </script>";
+        }
+    }
+    else
+    {
+        echo "<script>alert('Please fill in all fields!')</script>";
+        echo "<script type='text/javascript'> document.location ='signup.php'; </script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,44 +121,44 @@
 </body>
 
 <?php 
-$dbhost = "localhost:3307"; // added port parameter "3307" to ensure applications are configured to connect to MySQL using port 3307
-$dbuser = "root";
-$dbpassword = "";
-$dbname = "flexway_db";
+// $dbhost = "localhost:3307"; // added port parameter "3307" to ensure applications are configured to connect to MySQL using port 3307
+// $dbuser = "root";
+// $dbpassword = "";
+// $dbname = "flexway_db";
 
-$connection = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname);
+// $connection = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname);
 
-if (!$connection){
-    echo "<script>alert('Database connection invalid');</script>";
-}
+// if (!$connection){
+//     echo "<script>alert('Database connection invalid');</script>";
+// }
 
-if (isset($_POST['signup'])){
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $password1 = $_POST['password1'];
-    $password2 = $_POST['password2'];
+// if (isset($_POST['signup'])){
+//     $username = $_POST['username'];
+//     $email = $_POST['email'];
+//     $phone = $_POST['phone'];
+//     $password1 = $_POST['password1'];
+//     $password2 = $_POST['password2'];
 
-    if ($password1 === $password2) {
-        //$hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users(username, email, phone, password1, password2) VALUES ('$username', '$email', '$phone', '$password1', '$password2')";
-        $query = mysqli_query($connection, $sql);
+//     if ($password1 === $password2) {
+//         //$hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
+//         $sql = "INSERT INTO users(username, email, phone, password1, password2) VALUES ('$username', '$email', '$phone', '$password1', '$password2')";
+//         $query = mysqli_query($connection, $sql);
 
-        if ($query){
-            echo "<script>alert('Account successfully created');</script>";
+//         if ($query){
+//             echo "<script>alert('Account successfully created');</script>";
             
-            // Redirect to info.php only if the account creation is successful
-            session_start();
-            $_SESSION['username'] = $username; 
-            header('location: info.php');
-            exit(); // Ensure that no further code is executed after the redirection
-        } else {
-            echo "<script>alert('Error creating account');</script>";
-        }
-    } else {
-        echo "<script>alert('Passwords do not match');</script>";
-    }
-}
+//             // Redirect to info.php only if the account creation is successful
+//             session_start();
+//             $_SESSION['username'] = $username; 
+//             header('location: info.php');
+//             exit(); // Ensure that no further code is executed after the redirection
+//         } else {
+//             echo "<script>alert('Error creating account');</script>";
+//         }
+//     } else {
+//         echo "<script>alert('Passwords do not match');</script>";
+//     }
+// }
 ?>
 
 </html>

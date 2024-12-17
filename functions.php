@@ -23,4 +23,24 @@ die;
 
 }
 
+function totalWallets($conn, $user_id) {
+    $query = "SELECT COUNT(*) AS count FROM wallets WHERE user_id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = $result->fetch_assoc();
+    return $data['count'];
+}
+
+function totalBalance($conn, $user_id) {
+    $query = "SELECT SUM(balance) AS total FROM wallets WHERE user_id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = $result->fetch_assoc();
+    return $data['total'] ? $data['total'] : 0;
+}
+
 ?>
